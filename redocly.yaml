@@ -1,0 +1,5 @@
+rules:
+  struct: error
+  security-defined: error
+  nullable-type-sibling: error
+  no-unused-components: warn

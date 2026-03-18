@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: Party Reference Data Directory - TEST API
+  version: 1.0.0
+  description: Lightweight test API for validating Jenkins + Terraform APIM deployment flow.
+  contact:
+    name: EIS
+    email: EISSupportTeam@seacoastbank.com
+  x-serviceDomain: Party Reference Data Directory
+  x-businessDomain: Party Reference
+  x-apiType: Test
+  x-tags: Party,Test
+  x-systemOfRecord: TEST
+  x-apimURLsuffix: party-reference-data-directory-test
+  x-apimURLversion: v1
+  x-apimServiceURL: https://customer.api.uat.seacoastbank.com
+servers:
+  - url: https://api.dev.seacoastbank.com/party-reference-data-directory-test/v1
+    description: Development / Testing Server
+paths:
+  /health:
+    get:
+      operationId: getHealth
+      tags:
+        - health
+      summary: Health check endpoint for APIM deployment validation.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  service:
+                    type: string
+                    example: party-reference-test

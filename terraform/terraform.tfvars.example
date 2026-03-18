@@ -1,0 +1,13 @@
+# Terraform input example. CI/CD should pass these values via -var.
+# resource_group_name = "<apim-resource-group>"
+# api_management_name = "<apim-service-name>"
+
+# API-level subscription behavior (shown in APIM API -> Settings -> Subscription)
+# subscription_required = true
+# subscription_key_header_name = "subscriptionKey"
+# subscription_key_query_param_name = "subscriptionKey"
+
+# Optional toggles
+# fail_if_no_specs = true
+# attach_api_policy = true
+# spec_folder = "../build/api-bundled"
